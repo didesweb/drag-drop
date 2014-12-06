@@ -1,5 +1,4 @@
 drag-drop
 =========
 Arrastrar y soltar elementos
-
-http://didesweb.com/
+http://didesweb.com/html5/draganddrop
