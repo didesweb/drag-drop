@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Didesweb Drag & Drop</title>
+<style>
+  div {width:350px;height:70px;border:1px solid #CCCCCC;}
+</style>
+<script>
+  function permitirSoltar(ev) {
+   ev.preventDefault();
+  }
+  function soltar(ev) {
+   ev.preventDefault();
+   var data = ev.dataTransfer.getData("Text");
+   ev.target.appendChild(document.getElementById(data));
+  }
+  function arrastrar(ev) {
+   ev.dataTransfer.setData("Text", ev.target.id);
+  }
+</script>
+</head>
+<body>
+  <div ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+    <img id="img" src="img_logo.gif" draggable="true" ondragstart="arrastrar(event)">
+  </div>
+  <div ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+</body>
+</html> 
